@@ -3,9 +3,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 /*
-조합을 이용할 것
+조합을 이용해야 함
 nCr = n! / {(n-r)! * r!}
 케이스 [1 3] → 3C1 = 3! / (2! * 1!)
+
+for문을 3번 돌리는 것은 너무 비효율 적이므로
+nCr = n*(n-1)*...*(n-r+1) / r*...1
+으로 바꾸어서 풀었다.
  */
 
 // 다리놓기
