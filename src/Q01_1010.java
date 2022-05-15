@@ -13,7 +13,7 @@ nCr = n*(n-1)*...*(n-r+1) / r*...1
  */
 
 // 다리놓기
-public class Q1010 {
+public class Q01_1010 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
