@@ -12,7 +12,6 @@ nCr = n*(n-1)*...*(n-r+1) / r*...1
 으로 바꾸어서 풀었다.
  */
 
-// 다리놓기
 public class Q01_1010 {
     public static void main(String[] args) throws IOException {
 
@@ -29,13 +28,13 @@ public class Q01_1010 {
     }
 
     public static double Combination(int n, int r) {
-
         double a = 1;
         double b = 1;
 
         for (double i = n; i > n - r; i--) {
             a = a * i;
         }
+
         for (double i = r; i > 0; i--) {
             b = b * i;
         }
