@@ -13,11 +13,11 @@ N행 M열의 배열에서 만들 수 있는 8*8 체스판의 개수는 (N-7)*(M-
  */
 
 public class Q02_1018 {
-
     public static boolean[][] arr;
     public static int min = 64;
 
     public static void main(String[] args) throws IOException {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
@@ -52,6 +52,7 @@ public class Q02_1018 {
     }
 
     public static void find(int x, int y){
+
         int end_x = x+8;
         int end_y = y+8;
         int count = 0;
@@ -65,14 +66,12 @@ public class Q02_1018 {
                 if(arr[i][j]!=TF){
                     count++;
                 }
-
                 //색상이 엇갈려야 하므로 계속해서 TF를 바꿔주어야 함
                 TF = !TF;
             }
             //색상은 세로줄에서도 계속해서 엇갈려야 함.
             TF = !TF;
         }
-
         //첫번째 칸을 기준으로 할 때 색칠해야 할 개수가 count이고,
         //첫번째 칸과 반대되는 색을 기준으로 할 때 색칠해야 할 개수는 64-count이다.
         count = Math.min(count, 64-count);
