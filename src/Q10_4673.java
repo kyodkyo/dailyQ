@@ -1,17 +1,17 @@
 public class Q10_4673 {
     public static void main(String[] args) {
-        boolean[] tf = new boolean[10001];
+        boolean[] selfNum = new boolean[10001]; // false-셀프넘버 O, true-셀프넘버 X
 
         for(int i=1; i<10001; i++){
             int n = division(i);
             if(n<10001){
-                tf[n] = true;
+                selfNum[n] = true; //셀프넘버가 아닌 수이므로 true로 값을 바꿔준다.
             }
         }
 
         for(int i=1; i<10001; i++){
-            if(!tf[i]){
-                System.out.println(i);
+            if(!selfNum[i]){
+                System.out.println(i); //
             }
         }
     }
