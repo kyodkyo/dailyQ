@@ -14,13 +14,12 @@ class Q12_11728 {
         int[] result = new int[sizeA+sizeB];
 
         String[] elementsA = br.readLine().split(" ");
-        String[] elementsB = br.readLine().split(" ");
-
         for(int i=0; i<sizeA; i++){
             result[i] = Integer.parseInt(elementsA[i]);
         }
 
         int index = 0;
+        String[] elementsB = br.readLine().split(" ");
         for(int i=sizeA; i<result.length; i++){
             result[i] = Integer.parseInt(elementsB[index]);
             index++;
@@ -31,9 +30,9 @@ class Q12_11728 {
         for(int i:result){
             bw.write(String.valueOf(i) + " ");
         }
+
         bw.flush();
         bw.close();
-
 
         //[배열 출력 다른 방법] but, 시간초과 가능성이 있음,,
         // System.out.println(Arrays.toString(result));
